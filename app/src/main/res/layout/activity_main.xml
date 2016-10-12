@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <include layout="@layout/horizontal_divide_line"/>
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_tab_home"
+            style="@style/RadioButtonBottomTab"
+            android:checked="true"
+            android:drawableTop="@drawable/icon_tab_home"
+            android:text="首页"/>
+
+        <RadioButton
+            android:id="@+id/rb_tab_msg"
+            style="@style/RadioButtonBottomTab"
+            android:drawableTop="@drawable/icon_tab_msg"
+            android:text="消息"/>
+
+        <ImageView
+            android:id="@+id/iv_tab_add"
+            android:layout_width="45dp"
+            android:src="@drawable/icon_tab_add"
+            android:background="@drawable/correct_oran_sel"
+            android:layout_height="40dp"/>
+
+        <RadioButton
+            android:id="@+id/rb_tab_search"
+            style="@style/RadioButtonBottomTab"
+            android:drawableTop="@drawable/icon_tab_search"
+            android:text="发现"/>
+
+        <RadioButton
+            android:id="@+id/rb_tab_user"
+            style="@style/RadioButtonBottomTab"
+            android:drawableTop="@drawable/icon_tab_user"
+            android:text="我"/>
+    </RadioGroup>
+</LinearLayout>

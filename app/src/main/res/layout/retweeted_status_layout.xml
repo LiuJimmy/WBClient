@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_retweet_sel"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_retweeted_content"
+        style="@style/TextViewBody"
+        android:padding="16dp"
+        tools:text="转发的微博"/>
+
+    <include
+        android:id="@+id/fl_retweeted_status_media"
+        layout="@layout/status_media_layout"/>
+</LinearLayout>

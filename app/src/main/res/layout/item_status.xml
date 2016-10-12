@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/ll_status_content"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_white2gray_sel"
+              android:orientation="vertical">
+
+    <include layout="@layout/horizontal_divide_line"/>
+
+    <include layout="@layout/status_head_layout"/>
+
+    <TextView
+        android:id="@+id/tv_status_content"
+        style="@style/TextViewBody"
+        android:layout_width="match_parent"
+        android:layout_marginTop="-16dp"
+        android:padding="16dp"
+        tools:text="这是一条测试微博"/>
+
+    <include
+        android:id="@+id/fl_status_media_layout"
+        layout="@layout/status_media_layout"/>
+
+    <include
+        android:id="@+id/ll_retweeted_status"
+        layout="@layout/retweeted_status_layout"/>
+
+
+    <include layout="@layout/horizontal_divide_line"/>
+
+    <include
+        android:id="@+id/ll_status_bottom_bar"
+        layout="@layout/status_bottom_bar"/>
+
+    <include layout="@layout/horizontal_divide_line"/>
+
+</LinearLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray">
+
+    <LinearLayout
+        android:id="@+id/fl_user_info_cover"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_user_info_cover"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_user_head"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/avatar_default"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp">
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                style="@style/TextViewSubhead"
+                android:textColor="@color/white"
+                tools:text="用户昵称"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/boy"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/tv_friend"
+                style="@style/TextViewCaption"
+                android:textColor="@color/white"
+                tools:text="关注"/>
+
+            <TextView
+                android:id="@+id/tv_friend_count"
+                style="@style/TextViewCaption"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/white"
+                tools:text="38"/>
+
+            <include
+                layout="@layout/vertical_divide_line"
+                android:layout_width="1px"
+                android:layout_height="12dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
+
+            <TextView
+                android:id="@+id/tv_follower"
+                style="@style/TextViewCaption"
+                android:textColor="@color/white"
+                tools:text="粉丝"/>
+
+            <TextView
+                android:id="@+id/tv_follower_count"
+                style="@style/TextViewCaption"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/white"
+                tools:text="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/tv_user_sample_info"
+                style="@style/TextViewCaption"
+                android:textColor="@color/white"
+                tools:text="简介：用户简介"/>
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_edit_user_info"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.jimmy.wbclient.widget.Pull2RefreshListView
+        android:id="@+id/prlv_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:dividerHeight="8dp"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"/>
+
+    <include
+        layout="@layout/titlebar_layout"
+        android:background="@color/transparent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@id/fl_user_info_cover"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_user_info_home"
+                style="@style/RadioButtonUserInfoTab"
+                android:text="主页"/>
+
+            <RadioButton
+                android:id="@+id/rb_user_info_status"
+                style="@style/RadioButtonUserInfoTab"
+                android:checked="true"
+                android:text="微博"/>
+
+            <RadioButton
+                android:id="@+id/rb_user_info_photo"
+                style="@style/RadioButtonUserInfoTab"
+                android:text="相册"/>
+        </RadioGroup>
+
+        <include layout="@layout/horizontal_divide_line"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_user_info_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_gray_light"
+        android:orientation="vertical">
+
+        <include layout="@layout/horizontal_divide_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_add_friend"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:src="@drawable/add_friend_ori1"/>
+
+                <TextView
+                    android:id="@+id/tv_is_friend"
+                    style="@style/TextViewBottom"
+                    android:text="关注"
+                    android:textColor="@color/orange"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="20dp"
+                android:background="@color/divider_gray"/>
+
+            <TextView
+                android:id="@+id/tv_connect"
+                style="@style/TextViewBottom"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="聊天"
+                android:textColor="@color/txt_gray"/>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="20dp"
+                android:background="@color/divider_gray"/>
+
+            <LinearLayout
+                android:id="@+id/ll_hot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_list_menu1"/>
+
+                <TextView
+                    android:id="@+id/tv_hot"
+                    style="@style/TextViewBottom"
+                    android:text="他的热门"
+                    android:textColor="@color/txt_gray"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

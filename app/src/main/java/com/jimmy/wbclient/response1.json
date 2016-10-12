@@ -1,0 +1,24 @@
+[
+  {
+    "phrase": "[坏笑]",
+    "type": "face",
+    "url": "http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/50/pcmoren_huaixiao_org.png",
+    "hot": false,
+    "common": true,
+    "category": "",
+    "icon": "http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/50/pcmoren_huaixiao_thumb.png",
+    "value": "[坏笑]",
+    "picid": ""
+  },
+  {
+    "phrase": "[鄙视]",
+    "type": "face",
+    "url": "http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/71/bs2_org.gif",
+    "hot": false,
+    "common": true,
+    "category": "",
+    "icon": "http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/71/bs2_thumb.gif",
+    "value": "[鄙视]",
+    "picid": ""
+  }
+]
